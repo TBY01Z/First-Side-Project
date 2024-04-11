@@ -4,30 +4,27 @@
     <meta charset="de">
     <link rel="stylesheet" href="style.css">
     <title>Lotto Spiel</title>
+    <script="script.js">
   </head>
   <body>
     <h1>Lotto Spiel v.04</h1>
     <p>Hier haben Sie die Möglichkeit Lotto zu spielen, wählen Sie 6 Zahlen aus. Zum Schluss nutzen Sie den Button Spielen, hierdurch wird ihr "TIP" mit der "Ziehung" verglichen. Ihr "TIP" wird daraufhin mit der "Ziehung" verlichen, alle Richtigen werden hier mit einen Grünen Hintergrund markiert und die Falschen mit einem Roten Hintergrund. </p>
-    <div class="container">
-            <div class="left-panel">
-                <h2>Left Panel</h2>
-                <div id="left-buttons">
-                    <!-- Buttons from 1 to 49 will be generated here -->
-                </div>
-            </div>
-            <div clss="center-panel">
-                <h2>Center Panel</h2>
-                <div id="center-buttons">
-                    <Button !onClick="generateRandomNumbers(6)" > Spielen! </Button>
-                </div>
-              </div>
-            <div class="right-panel">
-                <h2>Right Panel</h2>
-                <div id="selected-numbers">
-                    <!-- Right panel will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
-        <script src="script.js"></script>
+    <div class="game">
+      <div class="tip">
+        <h2>Ihr TIP</h2>
+        <input type="text" id="tip-input01" placeholder="Zahl 1" min=1 max=49>
+        <input type="text" id="tip-input02" placeholder="Zahl 2" min=1 max=49>
+        <input type="text" id="tip-input03" placeholder="Zahl 3" min=1 max=49>
+        <input type="text" id="tip-input04" placeholder="Zahl 4" min=1 max=49>
+        <input type="text" id="tip-input05" placeholder="Zahl 5" min=1 max=49>
+        <input type="text" id="tip-input06" placeholder="Zahl 6" min=1 max=49>
+        <button id="spielen-button">Spielen</button> 
+      </div>
+      <div class="drawed-numbers">
+        <h2>Ziehung</h2>
+        <!-- draw num here -->
+      </div>
+    </div>
+        
   </body>  
 </html>
