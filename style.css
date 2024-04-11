@@ -1,6 +1,15 @@
-.wrap { 
-  background: black; 
-  text-align: center;}
-  
-.spalte-1 { float: left; width: 49%; background: #3a87fe; }
-  .spalte-2 { float: left; width: 49%; background: #3a87fe; }
+.container {
+    display: flex;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 20px;
+}
+
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+}
