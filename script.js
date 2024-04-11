@@ -19,9 +19,9 @@ function check_numbers(numbers){
   var tips = [inValue01, inValue02, inValue03, inValue04, inValue05, inValue06]
   for (i=0; i<numbers.lengt; i++)){
     if (tips.includes(numbers[i])){
-      document.getElementById("tip-input" + (i+1)).style.backgroundColor = "green";
+      document.getElementById("tip-input0" + (i+1)).style.backgroundColor = "green";
     } else {
-      document.getElementById("tip-input" + (i+1)).style.backgroundColor = "red";
+      document.getElementById("tip-input0" + (i+1)).style.backgroundColor = "red";
     }
   }
 }
