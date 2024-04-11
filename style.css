@@ -1,6 +1,6 @@
 .wrap { 
-  background: slateblue; 
+  background: black; 
   text-align: center;}
   
-.spalte-1 { float: left; width: 50%; background: #3a87fe; }
-  .spalte-2 { float: left; width: 50%; background: #3a87fe; }
+.spalte-1 { float: left; width: 49%; background: #3a87fe; }
+  .spalte-2 { float: left; width: 49%; background: #3a87fe; }
