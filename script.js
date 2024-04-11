@@ -7,24 +7,34 @@ document.addEventListener("DOMContentLoaded", function() {
             button.textContent = i;
             button.setAttribute('data-id', i);
             button.addEventListener('click', function() {
-                transferButton(button);
+              addValueToRightPanel(button.val());  
+              button.remove();
+              
             });
             leftButtonsDiv.appendChild(button);
         }
     }
 
     // Function to transfer button from left to right panel
-    function transferButton(button) {
-        const rightButtonsDiv = document.getElementById('right-buttons');
-        const rightButtons = rightButtonsDiv.getElementsByTagName('button');
-        if (rightButtons.length < 6) {
-            rightButtonsDiv.appendChild(button.cloneNode(true));
-            button.remove();
-        } else {
-            alert("You can only transfer a maximum of 6 buttons to the right panel.");
-        }
+    function addValueToRightPanel(number){
+      var input = document.createElement(number);
+      input.type = "text";
+        const numbers = document.getElementById('selected-numbers');
+      numbers.appendChild(input);
     }
 
     // Initialization
     createButtons();
 });
+function generateRandomNumbers(count){
+  const randomNumbers = [];
+  const maxNumber = 49;
+  const minNumber = 1;
+  while (randomNumbers.length < count) {
+    const randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    if (!randomNumbers.includes(randomNumber)) {
+      randomNumbers.push(randomNumber);
+    }
+  }
+  return randomNumbers;
+}
